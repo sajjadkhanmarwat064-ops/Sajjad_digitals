@@ -15,8 +15,9 @@
     }
 
     body{
-      background:linear-gradient(135deg,#0f0f0f,#1f1f1f);
+      background:#0b0b0b;
       color:white;
+      overflow-x:hidden;
     }
 
     /* NAVBAR */
@@ -29,18 +30,20 @@
       backdrop-filter:blur(10px);
       position:sticky;
       top:0;
+      z-index:1000;
     }
 
     .logo{
       color:#00ffcc;
-      font-size:28px;
+      font-size:30px;
       font-weight:bold;
+      text-shadow:0 0 10px #00ffcc;
     }
 
     .navbar a{
       color:white;
-      text-decoration:none;
       margin-left:20px;
+      text-decoration:none;
       transition:0.3s;
     }
 
@@ -50,31 +53,36 @@
 
     /* HERO */
     .hero{
-      height:90vh;
+      height:100vh;
       display:flex;
+      flex-direction:column;
       justify-content:center;
       align-items:center;
-      flex-direction:column;
       text-align:center;
       padding:20px;
     }
 
     .hero h1{
-      font-size:55px;
+      font-size:60px;
       color:#00ffcc;
-      margin-bottom:15px;
+      text-shadow:0 0 20px #00ffcc;
+      animation:float 3s infinite ease-in-out;
     }
 
-    .hero p{
+    .typing{
+      font-size:24px;
+      margin-top:15px;
       color:#ccc;
-      max-width:600px;
-      line-height:1.6;
+      border-right:2px solid #00ffcc;
+      white-space:nowrap;
+      overflow:hidden;
+      width:0;
+      animation:typing 5s steps(40,end) infinite alternate;
     }
 
     .btn{
-      margin-top:25px;
-      display:inline-block;
-      padding:14px 28px;
+      margin-top:30px;
+      padding:14px 30px;
       background:#00ffcc;
       color:black;
       text-decoration:none;
@@ -84,11 +92,11 @@
     }
 
     .btn:hover{
-      transform:scale(1.08);
+      transform:scale(1.1);
       background:white;
     }
 
-    /* SECTIONS */
+    /* SECTION */
     .section{
       padding:80px 10%;
       text-align:center;
@@ -96,11 +104,11 @@
 
     .section h2{
       color:#00ffcc;
-      font-size:36px;
       margin-bottom:40px;
+      font-size:38px;
     }
 
-    /* GLASS CARDS */
+    /* SERVICES */
     .cards{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -112,13 +120,14 @@
       border:1px solid rgba(255,255,255,0.1);
       padding:30px;
       border-radius:20px;
-      backdrop-filter:blur(10px);
       transition:0.4s;
+      backdrop-filter:blur(10px);
     }
 
     .card:hover{
       transform:translateY(-10px);
       border-color:#00ffcc;
+      box-shadow:0 0 20px #00ffcc55;
     }
 
     .card h3{
@@ -126,117 +135,20 @@
       margin-bottom:15px;
     }
 
-    /* CONTACT */
-    .contact p{
-      margin:10px 0;
-      font-size:18px;
+    /* PORTFOLIO */
+    .portfolio{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
     }
 
-    /* FOOTER */
-    footer{
-      text-align:center;
-      padding:20px;
-      background:#111;
-      color:#aaa;
+    .portfolio-box{
+      height:180px;
+      background:#1a1a1a;
+      border-radius:20px;
+      transition:0.4s;
     }
 
-    /* WHATSAPP */
-    .whatsapp{
-      position:fixed;
-      bottom:20px;
-      right:20px;
-      background:#25D366;
-      color:white;
-      padding:14px 18px;
-      border-radius:50px;
-      text-decoration:none;
-      font-weight:bold;
-      transition:0.3s;
-    }
-
-    .whatsapp:hover{
-      transform:scale(1.1);
-    }
-
-  </style>
-</head>
-
-<body>
-
-  <!-- NAVBAR -->
-  <div class="navbar">
-    <div class="logo">SD</div>
-
-    <div>
-      <a href="#">Home</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
-
-  <!-- HERO -->
-  <section class="hero">
-
-    <h1>SAJJAD DIGITALS</h1>
-
-    <p>
-      Professional Web Developer, Graphic Designer &
-      Content Writer helping businesses grow online.
-    </p>
-
-    <a href="#contact" class="btn">Hire Me</a>
-
-  </section>
-
-  <!-- SERVICES -->
-  <section class="section" id="services">
-
-    <h2>My Services</h2>
-
-    <div class="cards">
-
-      <div class="card">
-        <h3>Web Development</h3>
-        <p>Modern responsive business websites.</p>
-      </div>
-
-      <div class="card">
-        <h3>Logo Design</h3>
-        <p>Creative and premium logo designs.</p>
-      </div>
-
-      <div class="card">
-        <h3>Social Media Design</h3>
-        <p>Professional posts for brands.</p>
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section contact" id="contact">
-
-    <h2>Contact Me</h2>
-
-    <p>📞 923700207589</p>
-    <p>📧 sajjaddigitals.pk@gmail.com</p>
-
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    © 2026 Sajjad Digitals | All Rights Reserved
-  </footer>
-
-  <!-- WHATSAPP -->
-  <a class="whatsapp"
-  href="https://wa.me/923700207589"
-  target="_blank">
-
-  WhatsApp
-
-  </a>
-
-</body>
-</html>
+    .portfolio-box:hover{
+      transform:scale(1.05);
+      box-shadow:0 0 20px #00ffcc66;
