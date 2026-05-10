@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sajjad Digitals | Creative Universe</title>
+    <title>Sajjad Digitals | Official Studio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root { 
             --glass: rgba(255, 255, 255, 0.1); 
             --text: #ffffff;
+            --primary: #f39c12;
         }
 
         * { box-sizing: border-box; transition: all 0.4s ease; scroll-behavior: smooth; }
 
         body { 
             margin: 0; padding: 0; color: var(--text); font-family: 'Outfit', sans-serif;
-            /* Colorful Background */
             background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #b91d73, #f39c12);
             background-size: 400% 400%;
             animation: gradientBG 15s ease infinite;
@@ -35,10 +35,11 @@
             justify-content: center; align-items: center; text-align: center; padding: 40px 20px;
         }
 
-        .profile-area img {
-            width: 150px; height: 150px; border-radius: 50%;
-            border: 5px solid rgba(255,255,255,0.2); margin-bottom: 20px;
-            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        /* DIGITAL.PNG LOGO STYLE */
+        .site-logo {
+            width: 100%; max-width: 450px; height: auto;
+            margin-bottom: 20px; animation: scaleUp 1s ease;
+            filter: drop-shadow(0 0 15px rgba(243, 156, 18, 0.3));
         }
 
         .badge {
@@ -47,7 +48,6 @@
             text-transform: uppercase; margin-bottom: 20px; backdrop-filter: blur(5px);
         }
 
-        h1 { font-size: clamp(3rem, 10vw, 5rem); margin: 0; font-weight: 800; line-height: 1; }
         .hero p { font-size: 1.2rem; opacity: 0.9; max-width: 700px; margin-top: 20px; }
 
         /* Content Sections */
@@ -59,7 +59,7 @@
             border-radius: 30px; margin-bottom: 40px;
         }
 
-        h2 { font-size: 2.5rem; margin-bottom: 20px; border-left: 5px solid #f39c12; padding-left: 15px; }
+        h2 { font-size: 2.5rem; margin-bottom: 20px; border-left: 5px solid var(--primary); padding-left: 15px; }
 
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
         
@@ -67,8 +67,8 @@
             background: rgba(0,0,0,0.2); padding: 30px; border-radius: 20px;
             border: 1px solid rgba(255,255,255,0.05);
         }
-        .card:hover { transform: translateY(-10px); background: rgba(0,0,0,0.4); border-color: #f39c12; }
-        .card i { font-size: 2.5rem; color: #f39c12; margin-bottom: 20px; }
+        .card:hover { transform: translateY(-10px); background: rgba(0,0,0,0.4); border-color: var(--primary); }
+        .card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
 
         /* Social App Bottom Bar */
         .social-bar {
@@ -77,84 +77,67 @@
             justify-content: center; gap: 25px; width: fit-content;
             margin: 40px auto; border: 1px solid rgba(255,255,255,0.1);
         }
-        .social-icon {
-            font-size: 1.8rem; color: #fff; transition: 0.3s;
-        }
+        .social-icon { font-size: 1.8rem; color: #fff; transition: 0.3s; }
         .social-icon:hover { transform: scale(1.3) rotate(10deg); }
         .fa-whatsapp:hover { color: #25d366; }
-        .fa-fiverr:hover { color: #1db954; }
+        .fa-bolt:hover { color: #1db954; }
         .fa-facebook:hover { color: #1877f2; }
         .fa-instagram:hover { color: #e4405f; }
-        .fa-envelope:hover { color: #f39c12; }
+        .fa-envelope:hover { color: var(--primary); }
 
         footer { text-align: center; padding: 40px; opacity: 0.6; font-size: 0.9rem; }
 
-        /* Floating Animation */
-        .float { animation: floating 3s ease-in-out infinite; }
-        @keyframes floating {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
+        @keyframes scaleUp { from { opacity: 0; transform: scale(0.5); } to { opacity: 1; transform: scale(1); } }
 
     </style>
 </head>
 <body>
 
     <section class="hero">
-        <div class="profile-area float">
-            <img src="logo.png" alt="Sajjad Digitals Logo">
-        </div>
+        <img src="Digital.png" alt="Digital.png Text Logo" class="site-logo">
+        
         <div class="badge">Official Portfolio</div>
-        <h1>SAJJAD<br>DIGITALS</h1>
-        <p>Where Professionalism Meets Creativity. Certified DIT Expert delivering top-tier digital branding worldwide.</p>
+        <p>Sajjad Digitals: Premium 3D Logo Design & Professional Writing. Crafted by a Certified DIT Expert for the Global Era.</p>
         
         <div style="margin-top: 30px;">
-            <a href="https://www.fiverr.com/s/yv3315b" style="background: #f39c12; color: #000; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 800; box-shadow: 0 10px 20px rgba(0,0,0,0.3);">HIRE ME ON FIVERR</a>
+            <a href="https://www.fiverr.com/s/yv3315b" style="background: var(--primary); color: #000; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 800; box-shadow: 0 10px 20px rgba(0,0,0,0.3);">HIRE ME ON FIVERR</a>
         </div>
     </section>
 
     <div class="container">
         
         <div class="glass-box">
-            <h2>Introduction</h2>
+            <h2>About</h2>
             <p style="font-size: 1.2rem; line-height: 1.8;">
-                خوش آمدید! میں ہوں <strong>سجاد</strong>، گرافک ڈیزائننگ اور پروفیشنل رائٹنگ کی دنیا میں آپ کا پارٹنر۔ 
-                <strong>DIT (Diploma in Information Technology)</strong> سرٹیفائیڈ ہونے کے ناطے، میں جدید ٹیکنالوجی اور تخلیقی صلاحیتوں کو ملا کر ایسے ڈیزائن تیار کرتا ہوں جو آپ کے برانڈ کی پہچان بن جاتے ہیں۔ 
-                میرا مقصد صرف ڈیزائن بنانا نہیں، بلکہ آپ کے خوابوں کو حقیقت کا روپ دینا ہے۔
+                Welcome! I am **Sajjad**, your dedicated partner in Digital Branding and Professional Communication. As a Certified **DIT (Diploma in Information Technology)** expert, I merge cutting-edge technology with creative flair to build identities that command respect. My mission is to turn your vision into stunning digital reality, serving clients globally from Pakistan.
             </p>
         </div>
 
         <div class="glass-box">
-            <h2>What I Do?</h2>
+            <h2>Expertise</h2>
             <div class="grid">
                 <div class="card">
                     <i class="fas fa-cubes"></i>
-                    <h3>3D Logo Design</h3>
-                    <p>اعلیٰ معیار کے 3D لوگوز جو آپ کے بزنس کو ایک لگژری اور پروفیشنل لک دیتے ہیں۔</p>
+                    <h3>3D Logo Systems</h3>
+                    <p>High-end, premium 3D logos and mockups designed to give your business a legendary edge.</p>
                 </div>
                 <div class="card">
                     <i class="fas fa-pen-fancy"></i>
-                    <h3>Content Writing</h3>
-                    <p>پروفیشنل آرٹیکلز، اسائنمنٹس اور ایس ای او مواد جو آپ کے کلائنٹس کا دل جیت لے۔</p>
+                    <h3>Professional Writing</h3>
+                    <p>Engaging SEO articles, assignments, and product descriptions that convert visitors into customers.</p>
                 </div>
                 <div class="card">
-                    <i class="fas fa-bullhorn"></i>
-                    <h3>Social Media Ads</h3>
-                    <p>فیس بک، انسٹاگرام اور ٹک ٹاک کے لیے دلکش گرافکس اور ایڈز کی تیاری۔</p>
+                    <i class="fas fa-layer-group"></i>
+                    <h3>Brand Growth</h3>
+                    <p>Complete visual strategy and professional social media setup for a powerful digital presence.</p>
                 </div>
             </div>
         </div>
 
-        <div class="glass-box">
-            <h2>Skills & Authority</h2>
-            <p><strong>Expertise in:</strong> Adobe Photoshop, Illustrator, CorelDraw, MS Office, & SEO Writing.</p>
-            <p><strong>Global Reach:</strong> Providing services to clients across the USA, UK, and Arab countries through Fiverr.</p>
-        </div>
-
-        <div class="section-title" style="text-align: center; margin-top: 50px; font-size: 1.5rem; font-weight: 800;">CONNECT WITH ME</div>
+        <div class="section-title" style="text-align: center; margin-top: 50px; font-size: 1.5rem; font-weight: 800; letter-spacing: 2px;">CONNECT</div>
         <div class="social-bar">
             <a href="https://wa.me/923700207589" class="social-icon" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.fiverr.com/s/yv3315b" class="social-icon" target="_blank"><i class="fas fa-fonticons"></i></a>
+            <a href="https://www.fiverr.com/s/yv3315b" class="social-icon" target="_blank"><i class="fas fa-bolt"></i></a>
             <a href="https://www.facebook.com/share/1CiabBVVos/" class="social-icon" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="https://www.instagram.com/sajjad_digitals" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="mailto:sajjaddigitals.pk@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
@@ -163,7 +146,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 SAJJAD DIGITALS STUDIO. <br>Crafting Excellence for the Digital Era.</p>
+        <p>&copy; 2026 SAJJAD DIGITALS STUDIO. <br>Design. Write. Grow. | Based in Pakistan</p>
     </footer>
 
 </body>
